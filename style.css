@@ -1,0 +1,180 @@
+.completo{
+    font-family: 'Bowlby One SC', cursive;
+    font-family: 'Caveat', cursive;
+    font-family: 'Montserrat', sans-serif;
+    background-color: lightgray;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.Encabezado1{
+    background-color: blue;
+    padding: 12px 22px;
+}
+
+.Encabezado2{ 
+    float: right;
+    background-color: lightblue;
+    border-radius: 15px ;
+    border: 1px solid blue;
+    text-decoration: blue;
+    padding: 10px 20px;
+}
+
+#imagenLogo{
+    width: 100px;
+    margin-left: 50px;
+}
+
+#primero{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#imagenPerfil{
+    width: 250px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border:4px solid #0116f6; padding: 5px; background:#ffffff; 
+}
+
+#Nombre{
+    font-size: 40px;
+    margin-inline-end: 2px;
+}
+
+.informacion1{
+    margin-left: 60px;
+    float : left;
+    margin-block: 1px 2px;
+    writing-mode: horizontal-tb;
+}
+.informacion2{
+    margin-left: 40px;
+    float : center;
+    margin-block: 1px 2px;
+    writing-mode: horizontal-tb;
+}
+
+.informacion3{
+    float : right;
+    margin-block: 1px 2px;
+    writing-mode: horizontal-tb;
+}
+
+.BotonSeguir{
+    float: right;
+    background-color: blue;
+    border-radius: 15px;
+    border: 1px solid blue;
+    color: white;
+    padding: 16px 31px;
+    margin-top: 250px;
+    margin-bottom: 40px;
+    margin-left: 500px;
+}
+
+#segundo{
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.bloque1{
+    background-color: white;
+    border-radius: 15px;
+    width: 200%;
+    display: flex;
+    margin-right: 2%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.contenido1{
+    float : left;
+    margin-top:10px;
+    margin-left: 65px;
+}
+
+.contenido2{
+    float : center;
+    margin-top:10px;
+    margin-left: 25px;
+}
+
+#imagenContenido{
+    width: 700px;
+    height: 350px;
+    border-radius: 15px;
+}
+
+.contenido3{
+    float: left;
+    margin-left: 60px;
+}
+
+.contenido4{
+    float: right;
+    margin-right: 60px;
+    margin-top: 30px;
+}
+
+.CantidadMegusta{
+    border: none;
+    background-color: none;
+}
+
+.Publicacion{
+    color: gray;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+}
+
+.BotonMegusta{
+    float: right;
+    background-color: lightgray;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+    color: blue;
+    padding: 16px 31px;
+}
+
+.comentarios{
+    position: relative;
+    display: inline-block;
+    text-align: left;
+}
+
+.bloque2{
+    background-color: white;
+    border-radius: 15px;
+    margin-left: 2%;
+    padding: 20px;
+    max-width:400px;
+    max-height: 300px;
+}
+
+.comentarios{
+    
+}
+
+.BotonComentar{
+    float: right;
+    background-color: blue;
+    border-radius: 10%;
+    border: 1px solid blue;
+    color: white;
+    padding: 16px 31px;
+}
