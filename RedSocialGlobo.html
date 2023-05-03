@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Caveat&family=Montserrat&display=swap" rel="stylesheet">
     <script src ="Java.js"></script>
-    <title>Document</title>
+    <title>RedSocialGlobo</title>
+    <link rel="shortcut icon" type="image/png" href="logo.jpeg"/>
 </head>
 <body class = "completo">
     <header class = "Encabezado1"> 
         <img id = "imagenLogo" src = "logo.jpeg" rel = "stylesheet"> 
-    
-        <input class = "Encabezado2" type = "text" placeholder="Ingresar tu usuario...">
+
+        <ul class="navbar_usuario">
+            <input class = "navbar_usuario_boton" id="usuario" type = "text" placeholder="Ingresa tu usuario...">
+        </ul>
+
+        <!-- <input id = "Encabezado2" type = "text" placeholder="Ingresar tu usuario..." required onkeypress = "Iusuario()"> -->
     </header>
 
     <br></br>
@@ -52,28 +57,30 @@
             </div>  
 
             <div class="contenido3">
-                <br>
-                <input class = "BotonMegusta" type="button" value="Me Gusta">
+                <div id="tres1">
+                    <input id = "BotonMegusta" type="button" value= "Me Gusta" onclick="sumarUno()">
+                </div>
+                <div id="tres2">
+                    <input id = "contador" type="button" value= "200">
+                </div>
+                <div id="tres3">
+                    <label id="like">Likes</label>
+                </div>
             </div>
 
-            <div class="contenido4">
-                <input class ="CantidadMegusta" type="text" value="200">
-                <label>Likes</label>
-            </div>
-
-            <div class="comentarios">
+            <div class="contenido5">
                 <h3>Comentarios</h3>
                 <br><strong>Juan Perez</strong>¡Wow, esa foto de Tokio es impresionante!</br>
-                <br><strong>Kathleen J Rennie</strong>¡Esta foto de Tokio es simplemente espectacular! Me trae tantos recuerdos...</br>
+                <br><strong>Kathleen J Rennie</strong>¡Esta foto de Tokio es simplemente espectacular! Me trae tantos recuerdos.</br>
                 <br><strong>Diana Bell</strong>¡Espero que algún día pueda ver Tokio en persona!</br>
             </div>  
 
-            <div>
-                <form class = "Comentario">
-                    <input type = "text" placeholder="Deja tu comentario...">
-                    <input class = "BotonComentar" type="button" value="Comentar">
-                </form>  
-            </div>   
+            <ul class="lista_de_comentarios" id = "lista_comentarios"></ul>
+            
+            <article class = "publicacion_comentarios_agregar">
+                <textarea name="comentario" class = "texto_comentario" id = "comentario" placeholder = "Deja tu comentario..."></textarea>
+                <button class = "publicacion_comentarios_btn" id = "btnComentarios">Comentar</button>
+            </article>
         </div>
 
         <div class="bloque2">
@@ -83,3 +90,46 @@
     </section>
 </body>
 </html>
+
+<script>
+    document.getElementById('btnComentarios').addEventListener('click', function(evento){ 
+    console.log(document.getElementById('usuario'))
+    evento.preventDefault();
+    let usuario = document.getElementById('usuario').value;
+    console.log(usuario)
+
+    if(usuario === ''){
+        document.getElementById('usuario').focus();
+        document.getElementById('usuario').setAttribute('placeholder' , 'No ha ingresado usuario');
+        return;
+    }
+
+    let comentario = document.getElementById('comentario').value;
+
+    if(comentario === ""){
+        document.getElementById('comentario').setAttribute('placeholder' , 'No ha ingresado comentario');
+        return;
+    }
+
+    let text = document.createTextNode(usuario+ '  ' + comentario);
+    let listitem = document.createElement('li');
+    listitem.appendChild(text);
+
+    document.getElementById('lista_comentarios').appendChild(listitem);
+    
+    // let eliminar = document.createElement("p");
+    // eliminar.innerHTML = ("Eliminar");
+    // eliminar.className = "close";
+    // li.appendChild(eliminar)
+
+    // let close = document.getElementsByClassName("close");
+    // let i;
+
+    // for( i = 0; i < close.length; i++){
+    //     close[i].onclick = function(){
+    //         let div = this.parentElement;
+    //         div.style.display = "none";
+    //     }
+    // }
+});
+</script>

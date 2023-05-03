@@ -10,21 +10,35 @@
     margin-left: 15px;
 }
 .Encabezado1{
+    display: flex;
+    flex-direction: row;
     background-color: blue;
-    padding: 12px 22px;
+    padding: auto;
 }
 
-.Encabezado2{ 
-    float: right;
+#usuario{ 
+    display: flex;
+    flex-direction: row;
+    /* float: right; */
     background-color: lightblue;
     border-radius: 15px ;
     border: 1px solid blue;
-    text-decoration: blue;
     padding: 10px 20px;
+    transition-duration: 200ms;
+    margin-left: 850px;
+}
+
+.Encabezado2::placeholder {
+    color: blue;
+    font-size: 15px;
 }
 
 #imagenLogo{
-    width: 100px;
+    display: flex;
+    flex-direction: left;
+    max-width: 80px;
+    max-height: 40px;
+    margin-top: 10px;
     margin-left: 50px;
 }
 
@@ -57,6 +71,7 @@
     margin-block: 1px 2px;
     writing-mode: horizontal-tb;
 }
+
 .informacion2{
     margin-left: 40px;
     float : center;
@@ -76,10 +91,11 @@
     border-radius: 15px;
     border: 1px solid blue;
     color: white;
-    padding: 16px 31px;
+    padding: 14px 31px;
     margin-top: 250px;
     margin-bottom: 40px;
     margin-left: 500px;
+    font-size: 15px;
 }
 
 #segundo{
@@ -101,10 +117,18 @@
     display: inline-block;
     text-align: center;
 }
+
 .contenido1{
     float : left;
     margin-top:10px;
     margin-left: 65px;
+}
+
+.Publicacion{
+    color: gray;
+    position: relative;
+    display: inline-block;
+    text-align: left;
 }
 
 .contenido2{
@@ -120,8 +144,36 @@
 }
 
 .contenido3{
-    float: left;
-    margin-left: 60px;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 65px;
+    margin-right: 65px;
+}
+
+#tres1{
+    display: flex;
+    flex-direction: left;
+    margin-right: 140px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#tres2{
+    display: flex;
+    flex-direction: right;
+    margin-left: 300px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#tres3{
+    display: flex;
+    flex-direction: right;
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 .contenido4{
@@ -130,32 +182,92 @@
     margin-top: 30px;
 }
 
-.CantidadMegusta{
-    border: none;
-    background-color: none;
-}
-
-.Publicacion{
-    color: gray;
+.contenido5{
     position: relative;
     display: inline-block;
     text-align: left;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    font-size: 15px;
 }
 
-.BotonMegusta{
+#BotonMegusta{
     float: right;
     background-color: lightgray;
     border-radius: 15px;
     border: 1px solid lightgray;
     color: blue;
-    padding: 16px 31px;
+    padding: 14px 31px;
+    font-size: 15px;
 }
 
-.comentarios{
-    position: relative;
-    display: inline-block;
-    text-align: left;
+#contador{
+    background: transparent;
+    border: transparent;
+    text-decoration:black;
+    font-size: 30px;
 }
+
+#like{
+    font-size: 20px;
+}
+
+.publicacion_comentarios_agregar{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.lista_de_comentarios{
+    list-style:none;
+    display: flex;
+    flex-direction: left;
+    margin-top: 5px;
+    margin-left: 36px;
+}
+
+.texto_comentario{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 25px;
+    font-size: 15px;
+    background-color: lightgray;
+    border-radius: 15px;
+    transition-duration: 200ms;
+    margin-left: 70px;
+    padding: 6px 60px;
+    border-color: transparent;
+}
+
+.texto_comentario ::placeholder{
+    font-size: 15px;
+    background-color:black;
+}
+
+.publicacion_comentarios_btn{
+    float: right;
+    background-color: blue;
+    border-radius: 15px;
+    border: 1px solid blue;
+    color: white;
+    padding: 14px 20px;
+    margin-left: 60px;
+}
+
+/* .close{
+    font-size: 15px;
+    position: absolute;
+    right: 150px;
+    width: 20px;
+    z-index: 20;
+    transition-duration: 200ms;
+    display: block;
+    cursor: pointer;
+    color: red;
+    border: red;
+}  */
 
 .bloque2{
     background-color: white;
@@ -164,17 +276,5 @@
     padding: 20px;
     max-width:400px;
     max-height: 300px;
-}
-
-.comentarios{
-    
-}
-
-.BotonComentar{
-    float: right;
-    background-color: blue;
-    border-radius: 10%;
-    border: 1px solid blue;
-    color: white;
-    padding: 16px 31px;
+    line-height: 22px;
 }
