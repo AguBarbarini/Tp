@@ -1,19 +1,52 @@
-function cambiartexto(){
-    let element = document.getElementById("Button");
-    if (element.value=="Seguir"){
-        element.value = "Dejar de seguir";
-    } else {
-        element.value = "Seguir";
-    }
-}
+Vue.createApp({
+    data(){
+        return{
+            textoBoton: 'Seguir',
+            alternar: false,
+            MeGusta: 'Me Gusta',
+            contador: 200,
 
-function sumarUno(){
-    let contador;
-    if(document.getElementById("contador").value == "200")
-    {
-        let valorVista = parseInt(document.getElementById("contador").value);
-        contador = valorVista + 1;
-    }
-    document.getElementById("contador").value=contador.toString();
-}
+            comentario: {
+                usuario: '',
+                contenido: ''
+            },
 
+            comentarios: [],
+
+            mostrarError: false
+        };
+    },
+
+    methods: {
+        cambiartexto() {
+            if(this.alternar){
+                this.textoBoton = 'Seguir';
+            }else{
+                this.textoBoton = 'Dejar de Seguir';
+            }
+            this.alternar = !this.alternar;
+        },
+
+        sumarUno(){
+            if(this.contador === 200){
+                this.contador ++;
+            }
+        },
+
+        enviarComentario(){
+            // if(usuario === '' || comentario === ''){
+            //     this.mostrarError = true
+            // }else{
+                this.comentarios.push({
+                    usuario: this.comentario.usuario,
+                    contenido: this.comentario.contenido
+                });
+                this.comentario.contenido = '';
+            // };
+        },
+
+        borrarComentario(comentario) {
+            this.comentarios.splice(this.comentarios.indexOf(comentario), 1);
+        }
+    }
+}).mount('#app')

@@ -13,19 +13,14 @@
     display: flex;
     flex-direction: row;
     background-color: blue;
-    padding: auto;
 }
 
-#usuario{ 
-    display: flex;
-    flex-direction: row;
-    /* float: right; */
+._usuario{ 
     background-color: lightblue;
     border-radius: 15px ;
     border: 1px solid blue;
     padding: 10px 20px;
-    transition-duration: 200ms;
-    margin-left: 850px;
+    margin-left: 950px;
 }
 
 .Encabezado2::placeholder {
@@ -34,12 +29,9 @@
 }
 
 #imagenLogo{
-    display: flex;
-    flex-direction: left;
     max-width: 80px;
     max-height: 40px;
-    margin-top: 10px;
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 #primero{
@@ -83,9 +75,6 @@
     float : right;
     margin-block: 1px 2px;
     writing-mode: horizontal-tb;
-}
-
-.BotonSeguir{
     float: right;
     background-color: blue;
     border-radius: 15px;
@@ -191,7 +180,7 @@
     font-size: 15px;
 }
 
-#BotonMegusta{
+.BotonMegusta{
     float: right;
     background-color: lightgray;
     border-radius: 15px;
@@ -208,7 +197,7 @@
     font-size: 30px;
 }
 
-#like{
+#meGusta{
     font-size: 20px;
 }
 
@@ -219,6 +208,14 @@
     margin-right: 10px;
 }
 
+.cuadro-mensaje{
+  font-size: 20px;  
+  background-color: #f2f2f2;
+  border: 1px solid #ee0505;
+  color: black;
+  border-radius: 5px;
+}
+
 .lista_de_comentarios{
     list-style:none;
     display: flex;
@@ -227,47 +224,41 @@
     margin-left: 36px;
 }
 
+.comentarios{
+    display:flexbox;
+    align-content: center;
+}
+
 .texto_comentario{
-    display: flex;
-    flex-direction: row;
     width: 400px;
     height: 25px;
     font-size: 15px;
     background-color: lightgray;
     border-radius: 15px;
-    transition-duration: 200ms;
-    margin-left: 70px;
     padding: 6px 60px;
     border-color: transparent;
-}
-
-.texto_comentario ::placeholder{
-    font-size: 15px;
-    background-color:black;
+    resize: none;
 }
 
 .publicacion_comentarios_btn{
-    float: right;
     background-color: blue;
     border-radius: 15px;
     border: 1px solid blue;
     color: white;
     padding: 14px 20px;
-    margin-left: 60px;
+    margin-left: 550px;
 }
 
-/* .close{
+.close{
     font-size: 15px;
-    position: absolute;
-    right: 150px;
-    width: 20px;
-    z-index: 20;
-    transition-duration: 200ms;
-    display: block;
-    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    display:inline-flex;
     color: red;
     border: red;
-}  */
+    background-color: lightgray;
+    border-radius: 15px;
+} 
 
 .bloque2{
     background-color: white;
