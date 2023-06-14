@@ -34,15 +34,16 @@ Vue.createApp({
         },
 
         enviarComentario(){
-            // if(usuario === '' || comentario === ''){
-            //     this.mostrarError = true
-            // }else{
+            if(this.comentario.usuario === '' || this.comentario.contenido === ''){
+                this.mostrarError = true;
+            }else{
                 this.comentarios.push({
                     usuario: this.comentario.usuario,
                     contenido: this.comentario.contenido
                 });
                 this.comentario.contenido = '';
-            // };
+                this.mostrarError = false;
+            };
         },
 
         borrarComentario(comentario) {

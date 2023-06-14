@@ -80,9 +80,9 @@
                         <form v-on:submit.prevent="enviarComentario">
                             <textarea class = "texto_comentario" id="contenido" v-model="comentario.contenido" placeholder="Deja tu comentario..."></textarea>
                             <button class="publicacion_comentarios_btn" type="submit">Comentar</button>
-                            <!-- <p v-if="mostrarError" class="cuadro-mensaje">
+                            <p v-if="mostrarError" class="cuadro-mensaje">
                                 <strong>¡Por favor, ingresar usuario y comentario!</strong>
-                            </p> -->
+                            </p>
                         </form>
                     </div>
                 </div>  
